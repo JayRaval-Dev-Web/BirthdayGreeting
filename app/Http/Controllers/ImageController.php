@@ -11,10 +11,7 @@ use Stichoza\GoogleTranslate\GoogleTranslate;
 
 class ImageController extends Controller
 {
-    use Illuminate\Http\Request;
-    use Intervention\Image\ImageManager;
-    use Intervention\Image\Drivers\Gd\Driver; // You can also try Imagick for even better quality if installed.
-
+    // You can also try Imagick for even better quality if installed.
     public function saveCompositeImage(Request $request)
     {
         $imageData = $request->input('image');
@@ -46,17 +43,17 @@ class ImageController extends Controller
 
         $newImage = $imageManager->read($imageData);
 
-        // Don't distort the aspect ratio, instead fit the canvas
         $newImage->resize($width, $height, function ($constraint) {
             $constraint->aspectRatio();
             $constraint->upsize();
         });
 
-        // You can also apply sharpen or other filters if desired
-        $newImage->sharpen(5); // small sharpening
+        // Apply optional enhancement
+        $newImage->sharpen(5);
 
-        // Save with high quality (100)
-        $newImage->toPng(quality: 100)->save($existingPath);
+        // Save the image at full quality
+        // The parameters are: (path, quality, format)
+        $newImage->save($existingPath, 100, 'png');
 
         return response()->json([
             'path' => asset('images/' . $filename),
@@ -64,8 +61,6 @@ class ImageController extends Controller
             'height' => $height
         ]);
     }
-
-
 
     public function fetchImages()
     {
