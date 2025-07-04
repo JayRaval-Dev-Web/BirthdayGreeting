@@ -33,3 +33,4 @@ Route::get('/edit-image/{image}', function ($image) {
 // web.php
 Route::post('/save-composite-image', [ImageController::class, 'saveCompositeImage'])->name('save.composite.image');
 Route::get('/fetch-images', [ImageController::class, 'fetchImages'])->name('fetch.images');
+Route::post('/translate', [ImageController::class, 'translate'])->name('translate');

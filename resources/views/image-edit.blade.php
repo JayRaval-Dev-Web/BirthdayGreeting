@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Inserting</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif&display=swap" rel="stylesheet">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
     <style>
         .sticky-top {
             position: sticky;
@@ -17,7 +16,6 @@
             padding: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
         }
 
         #preview-overlay span {
@@ -29,7 +27,7 @@
 
 <body>
 
-    <h1>Welcome to the Birthday Greeting</h1>
+    <h1 class="text-center">Welcome to the Birthday Greeting <a href="{{ route('home') }}" class="btn btn-primary">Go Back</a> </h1>
 
     <div class="container">
         <div class="row col-12">
@@ -170,104 +168,115 @@
                         <div class="mb-3 text-enter-section d-none">
                             <label class="form-label">Language</label>
                             <select class="form-select language">
-                                <option value="english">English</option>
-                                <option value="hindi">Hindi</option>
-                                <option value="spanish">Spanish</option>
-                                <option value="french">French</option>
-                                <option value="german">German</option>
-                                <option value="chinese">Chinese (Mandarin)</option>
-                                <option value="japanese">Japanese</option>
-                                <option value="korean">Korean</option>
-                                <option value="russian">Russian</option>
-                                <option value="portuguese">Portuguese</option>
-                                <option value="arabic">Arabic</option>
-                                <option value="bengali">Bengali</option>
-                                <option value="italian">Italian</option>
-                                <option value="urdu">Urdu</option>
-                                <option value="turkish">Turkish</option>
-                                <option value="vietnamese">Vietnamese</option>
-                                <option value="thai">Thai</option>
-                                <option value="polish">Polish</option>
-                                <option value="dutch">Dutch</option>
-                                <option value="indonesian">Indonesian</option>
-                                <option value="swedish">Swedish</option>
-                                <option value="greek">Greek</option>
-                                <option value="czech">Czech</option>
-                                <option value="romanian">Romanian</option>
-                                <option value="hungarian">Hungarian</option>
-                                <option value="finnish">Finnish</option>
-                                <option value="danish">Danish</option>
-                                <option value="norwegian">Norwegian</option>
-                                <option value="hebrew">Hebrew</option>
-                                <option value="malay">Malay</option>
-                                <option value="filipino">Filipino</option>
-                                <option value="slovak">Slovak</option>
-                                <option value="bulgarian">Bulgarian</option>
-                                <option value="croatian">Croatian</option>
-                                <option value="serbian">Serbian</option>
-                                <option value="ukrainian">Ukrainian</option>
-                                <option value="persian">Persian</option>
-                                <option value="swahili">Swahili</option>
-                                <option value="estonian">Estonian</option>
-                                <option value="latvian">Latvian</option>
-                                <option value="lithuanian">Lithuanian</option>
-                                <option value="slovenian">Slovenian</option>
-                                <option value="albanian">Albanian</option>
-                                <option value="macedonian">Macedonian</option>
-                                <option value="georgian">Georgian</option>
-                                <option value="armenian">Armenian</option>
-                                <option value="kazakh">Kazakh</option>
-                                <option value="azerbaijani">Azerbaijani</option>
-                                <option value="tamil">Tamil</option>
-                                <option value="telugu">Telugu</option>
-                                <option value="marathi">Marathi</option>
-                                <option value="gujarati">Gujarati</option>
-                                <option value="punjabi">Punjabi</option>
-                                <option value="malayalam">Malayalam</option>
-                                <option value="kannada">Kannada</option>
-                                <option value="sinhala">Sinhala</option>
-                                <option value="nepali">Nepali</option>
-                                <option value="burmese">Burmese</option>
-                                <option value="lao">Lao</option>
-                                <option value="khmer">Khmer</option>
-                                <option value="mongolian">Mongolian</option>
-                                <option value="pashto">Pashto</option>
-                                <option value="somali">Somali</option>
-                                <option value="zulu">Zulu</option>
-                                <option value="xhosa">Xhosa</option>
-                                <option value="afrikaans">Afrikaans</option>
-                                <option value="bosnian">Bosnian</option>
-                                <option value="belarusian">Belarusian</option>
-                                <option value="basque">Basque</option>
-                                <option value="catalan">Catalan</option>
-                                <option value="galician">Galician</option>
-                                <option value="welsh">Welsh</option>
-                                <option value="irish">Irish</option>
-                                <option value="scottish-gaelic">Scottish Gaelic</option>
-                                <option value="icelandic">Icelandic</option>
-                                <option value="luxembourgish">Luxembourgish</option>
-                                <option value="maltese">Maltese</option>
-                                <option value="tajik">Tajik</option>
-                                <option value="uzbek">Uzbek</option>
-                                <option value="kyrgyz">Kyrgyz</option>
-                                <option value="turkmen">Turkmen</option>
-                                <option value="yiddish">Yiddish</option>
-                                <option value="haitian-creole">Haitian Creole</option>
-                                <option value="maori">Maori</option>
-                                <option value="samoan">Samoan</option>
-                                <option value="tongan">Tongan</option>
-                                <option value="fijian">Fijian</option>
-                                <option value="papuan">Papuan</option>
-                                <option value="amharic">Amharic</option>
-                                <option value="tigrinya">Tigrinya</option>
-                                <option value="quechua">Quechua</option>
-                                <option value="aymara">Aymara</option>
-                                <option value="guarani">Guarani</option>
-                                <option value="nahuatl">Nahuatl</option>
-                                <option value="mapudungun">Mapudungun</option>
-                                <option value="cherokee">Cherokee</option>
-                                <option value="inuktitut">Inuktitut</option>
+                                <option value="af">Afrikaans</option>
+                                <option value="sq">Albanian</option>
+                                <option value="am">Amharic</option>
+                                <option value="ar">Arabic</option>
+                                <option value="hy">Armenian</option>
+                                <option value="az">Azerbaijani</option>
+                                <option value="eu">Basque</option>
+                                <option value="be">Belarusian</option>
+                                <option value="bn">Bengali</option>
+                                <option value="bs">Bosnian</option>
+                                <option value="bg">Bulgarian</option>
+                                <option value="my">Burmese</option>
+                                <option value="ca">Catalan</option>
+                                <option value="ceb">Cebuano</option>
+                                <option value="ny">Chichewa</option>
+                                <option value="zh">Chinese (Mandarin)</option>
+                                <option value="co">Corsican</option>
+                                <option value="hr">Croatian</option>
+                                <option value="cs">Czech</option>
+                                <option value="da">Danish</option>
+                                <option value="nl">Dutch</option>
+                                <option value="en">English</option>
+                                <option value="eo">Esperanto</option>
+                                <option value="et">Estonian</option>
+                                <option value="fi">Finnish</option>
+                                <option value="fr">French</option>
+                                <option value="fy">Frisian</option>
+                                <option value="gl">Galician</option>
+                                <option value="ka">Georgian</option>
+                                <option value="de">German</option>
+                                <option value="el">Greek</option>
+                                <option value="gu">Gujarati</option>
+                                <option value="ht">Haitian Creole</option>
+                                <option value="ha">Hausa</option>
+                                <option value="haw">Hawaiian</option>
+                                <option value="iw">Hebrew</option>
+                                <option value="hi">Hindi</option>
+                                <option value="hmn">Hmong</option>
+                                <option value="hu">Hungarian</option>
+                                <option value="is">Icelandic</option>
+                                <option value="ig">Igbo</option>
+                                <option value="id">Indonesian</option>
+                                <option value="ga">Irish</option>
+                                <option value="it">Italian</option>
+                                <option value="ja">Japanese</option>
+                                <option value="jw">Javanese</option>
+                                <option value="kn">Kannada</option>
+                                <option value="kk">Kazakh</option>
+                                <option value="km">Khmer</option>
+                                <option value="ko">Korean</option>
+                                <option value="ku">Kurdish (Kurmanji)</option>
+                                <option value="ky">Kyrgyz</option>
+                                <option value="lo">Lao</option>
+                                <option value="la">Latin</option>
+                                <option value="lv">Latvian</option>
+                                <option value="lt">Lithuanian</option>
+                                <option value="lb">Luxembourgish</option>
+                                <option value="mk">Macedonian</option>
+                                <option value="mg">Malagasy</option>
+                                <option value="ms">Malay</option>
+                                <option value="ml">Malayalam</option>
+                                <option value="mt">Maltese</option>
+                                <option value="mi">Maori</option>
+                                <option value="mr">Marathi</option>
+                                <option value="mn">Mongolian</option>
+                                <option value="my">Myanmar (Burmese)</option>
+                                <option value="ne">Nepali</option>
+                                <option value="no">Norwegian</option>
+                                <option value="or">Odia</option>
+                                <option value="ps">Pashto</option>
+                                <option value="fa">Persian</option>
+                                <option value="pl">Polish</option>
+                                <option value="pt">Portuguese</option>
+                                <option value="pa">Punjabi</option>
+                                <option value="ro">Romanian</option>
+                                <option value="ru">Russian</option>
+                                <option value="sm">Samoan</option>
+                                <option value="gd">Scots Gaelic</option>
+                                <option value="sr">Serbian</option>
+                                <option value="st">Sesotho</option>
+                                <option value="sn">Shona</option>
+                                <option value="sd">Sindhi</option>
+                                <option value="si">Sinhala</option>
+                                <option value="sk">Slovak</option>
+                                <option value="sl">Slovenian</option>
+                                <option value="so">Somali</option>
+                                <option value="es">Spanish</option>
+                                <option value="su">Sundanese</option>
+                                <option value="sw">Swahili</option>
+                                <option value="sv">Swedish</option>
+                                <option value="tg">Tajik</option>
+                                <option value="ta">Tamil</option>
+                                <option value="tt">Tatar</option>
+                                <option value="te">Telugu</option>
+                                <option value="th">Thai</option>
+                                <option value="tr">Turkish</option>
+                                <option value="tk">Turkmen</option>
+                                <option value="uk">Ukrainian</option>
+                                <option value="ur">Urdu</option>
+                                <option value="ug">Uyghur</option>
+                                <option value="uz">Uzbek</option>
+                                <option value="vi">Vietnamese</option>
+                                <option value="cy">Welsh</option>
+                                <option value="xh">Xhosa</option>
+                                <option value="yi">Yiddish</option>
+                                <option value="yo">Yoruba</option>
+                                <option value="zu">Zulu</option>
                             </select>
+
                         </div>
                         <div class="mb-3 text-enter-section d-none">
                             <label class="form-label">Font Size (px)</label>
@@ -293,7 +302,6 @@
                                 <option value="60">60</option>
                                 <option value="72">72</option>
                             </select>
-
                         </div>
                         <div class="mb-3 text-enter-section d-none">
                             <label class="form-label">Font Color</label>
@@ -331,13 +339,21 @@
                         <div class="card-body position-relative">
                             <h5 class="card-title">Image Preview</h5>
                             <div style="position: relative; display: inline-block;">
-                                <img id="image-preview" src="{{ asset('images/' . $image) }}" alt="Image Preview" class="img-fluid">
+                                <img id="image-preview" src="{{ asset('images/' . $image) }}" alt="Image Preview" class="img-fluid" style="width: 100%; height: auto;">
                                 <div id="preview-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
                             </div>
                             <div class="text-right">
                                 <button class="btn btn-primary mt-3" id="save_changes">Save Changes</button>
                             </div>
                         </div>
+
+                    </div>
+                    <div class="row">
+                            <div class="card-body" id="content-list">
+    
+                            </div>
+                        </div>
+    
                     </div>
                 </div>
             </div>
@@ -346,8 +362,15 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="https://www.google.com/jsapi"></script>
+    <!-- Add Aksharamukha Transliteration Library -->
+    <script src="https://cdn.jsdelivr.net/npm/aksharamukha-js@1.0.5/dist/aksharamukha.min.js"></script>
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const img = document.getElementById("image-preview");
+            const originalSrc = img.getAttribute("src");
+            img.setAttribute("src", originalSrc + "?t=" + new Date().getTime());
+        });
+
         document.getElementById("save_changes").addEventListener("click", function() {
             html2canvas(document.querySelector("#preview-overlay").parentElement).then(canvas => {
                 const imageData = canvas.toDataURL("image/png");
@@ -355,58 +378,22 @@
                 $.post("{{ route('save.composite.image') }}", {
                     _token: '{{ csrf_token() }}',
                     image: imageData,
-                    filename: '{{ $image }}' // send current image filename
+                    filename: '{{ $image }}'
                 }, function(response) {
-                    // Optional: show alert
                     alert("Image saved: " + response.path);
-
-                    // Redirect to home route
                     window.location.href = "{{ route('home') }}";
                 });
 
             });
         });
-    </script>
-
-    <script>
-        google.load("elements", "1", {
-            packages: "transliteration"
-        });
-
-        let transliterationControl;
-
-        google.setOnLoadCallback(function() {
-            const options = {
-                sourceLanguage: google.elements.transliteration.LanguageCode.ENGLISH,
-                destinationLanguage: ['hi'], // default to Hindi
-                transliterationEnabled: true
-            };
-
-            transliterationControl = new google.elements.transliteration.TransliterationControl(options);
-        });
-
-        window.transliterate = function(text, langCode) {
-            return new Promise((resolve, reject) => {
-                if (!transliterationControl) {
-                    reject("Transliteration control not ready");
-                    return;
-                }
-
-                transliterationControl.setLanguagePair(google.elements.transliteration.LanguageCode.ENGLISH, langCode);
-                transliterationControl.transliterate([text], (result) => {
-                    resolve(result[0]);
-                });
-            });
-        };
 
         let contentCount = 0;
         let currentBlockIndex = 0;
 
-        // Initial setup
         bindEventsForBlock(document.querySelector(".content-block"));
         showBlockByIndex(currentBlockIndex);
+        updateContentList();
 
-        // Add More Content
         document.getElementById("add_more").addEventListener("click", () => {
             contentCount++;
             const blockHTML = createContentBlock(contentCount);
@@ -417,9 +404,9 @@
             bindEventsForBlock(block);
             currentBlockIndex = getBlocks().length - 1;
             showBlockByIndex(currentBlockIndex);
+            updateContentList();
         });
 
-        // Back
         document.getElementById("back").addEventListener("click", () => {
             if (currentBlockIndex > 0) {
                 currentBlockIndex--;
@@ -427,16 +414,13 @@
             }
         });
 
-        // Next
         document.getElementById("next").addEventListener("click", () => {
-            const blocks = getBlocks();
-            if (currentBlockIndex < blocks.length - 1) {
+            if (currentBlockIndex < getBlocks().length - 1) {
                 currentBlockIndex++;
                 showBlockByIndex(currentBlockIndex);
             }
         });
 
-        // Reset
         document.getElementById("reset").addEventListener("click", () => {
             const blocks = getBlocks();
             if (blocks.length > 1) {
@@ -446,9 +430,9 @@
             } else {
                 document.getElementById("preview-overlay").innerHTML = "";
             }
+            updateContentList();
         });
 
-        // Helpers
         function createContentBlock(id) {
             return document.querySelector(".content-block").outerHTML
                 .replace(/data-id="0"/g, `data-id="${id}"`)
@@ -461,10 +445,10 @@
             const imageWidth = block.querySelector(".image-width");
             const imageHeight = block.querySelector(".image-height");
             const textEnter = block.querySelector(".text_enter");
+            const language = block.querySelector(".language");
             const fontText = block.querySelector(".font-text");
             const fontSize = block.querySelector(".font-size");
             const fontColor = block.querySelector(".font-color");
-            const language = block.querySelector(".language");
             const xPos = block.querySelector(".content-x-pos");
             const yPos = block.querySelector(".content-y-pos");
 
@@ -476,54 +460,81 @@
                     imgSections.forEach(el => el.classList.remove("d-none"));
                     textSections.forEach(el => el.classList.add("d-none"));
                     addOrUpdateOverlay(block.dataset.id, 'image');
+                    updateImageOverlay(block);
                 } else if (type === "text") {
                     imgSections.forEach(el => el.classList.add("d-none"));
                     textSections.forEach(el => el.classList.remove("d-none"));
                     addOrUpdateOverlay(block.dataset.id, 'text');
+                    updateTextOverlay(block);
                 } else {
                     imgSections.forEach(el => el.classList.add("d-none"));
                     textSections.forEach(el => el.classList.add("d-none"));
                     removeOverlay(block.dataset.id);
                 }
+                updateContentList();
             });
 
-            imageUpload.addEventListener("change", () => updateImageOverlay(block));
-            imageWidth.addEventListener("input", () => updateImageOverlay(block));
-            imageHeight.addEventListener("input", () => updateImageOverlay(block));
-            xPos.addEventListener("input", () => updateOverlayPosition(block));
-            yPos.addEventListener("input", () => updateOverlayPosition(block));
+            imageUpload.addEventListener("change", () => {
+                updateImageOverlay(block);
+                updateContentList();
+            });
+            imageWidth.addEventListener("input", () => {
+                updateImageOverlay(block);
+                updateContentList();
+            });
+            imageHeight.addEventListener("input", () => {
+                updateImageOverlay(block);
+                updateContentList();
+            });
+            xPos.addEventListener("input", () => {
+                updateOverlayPosition(block);
+                updateContentList();
+            });
+            yPos.addEventListener("input", () => {
+                updateOverlayPosition(block);
+                updateContentList();
+            });
 
-            textEnter.addEventListener("input", () => updateTextOverlay(block));
-            fontText.addEventListener("input", () => updateTextOverlay(block));
-            fontSize.addEventListener("input", () => updateTextOverlay(block));
-            fontColor.addEventListener("input", () => updateTextOverlay(block));
-            language.addEventListener("input", () => updateTextOverlay(block));
+            textEnter.addEventListener("input", async () => {
+                await updateTextOverlay(block);
+                updateContentList();
+            });
+            fontText.addEventListener("input", async () => {
+                await updateTextOverlay(block);
+                updateContentList();
+            });
+            fontSize.addEventListener("input", async () => {
+                await updateTextOverlay(block);
+                updateContentList();
+            });
+            fontColor.addEventListener("input", async () => {
+                await updateTextOverlay(block);
+                updateContentList();
+            });
+            language.addEventListener("input", async () => {
+                await updateTextOverlay(block);
+                updateContentList();
+            });
         }
 
         function addOrUpdateOverlay(id, type) {
             let overlay = document.getElementById(`overlay-${id}`);
-
-            // If overlay exists but is the wrong type, remove it
             if (overlay) {
-                const isImageOverlay = overlay.tagName.toLowerCase() === 'img';
-                if ((type === 'image' && !isImageOverlay) || (type === 'text' && isImageOverlay)) {
+                const isImage = overlay.tagName.toLowerCase() === "img";
+                if ((type === "image" && !isImage) || (type === "text" && isImage)) {
                     overlay.remove();
-                    overlay = null; // force create new one
+                    overlay = null;
                 }
             }
-
-            // Create overlay if needed
             if (!overlay) {
-                overlay = type === 'image' ? document.createElement('img') : document.createElement('span');
+                overlay = type === "image" ? document.createElement("img") : document.createElement("span");
                 overlay.id = `overlay-${id}`;
-                overlay.style.position = 'absolute';
-                overlay.style.display = 'block';
+                overlay.style.position = "absolute";
+                overlay.style.display = "block";
                 document.getElementById("preview-overlay").appendChild(overlay);
             }
-
-            overlay.style.display = 'block';
+            overlay.style.display = "block";
         }
-
 
         function removeOverlay(id) {
             const el = document.getElementById(`overlay-${id}`);
@@ -550,113 +561,30 @@
             overlay.style.left = x;
             overlay.style.top = y;
         }
-        const languageCodeMap = {
-            afrikaans: "af",
-            albanian: "sq",
-            amharic: "am",
-            arabic: "ar",
-            armenian: "hy",
-            azerbaijani: "az",
-            basque: "eu",
-            belarusian: "be",
-            bengali: "bn",
-            bosnian: "bs",
-            bulgarian: "bg",
-            burmese: "my",
-            catalan: "ca",
-            cebuano: "ceb",
-            chinese: "zh",
-            corsican: "co",
-            croatian: "hr",
-            czech: "cs",
-            danish: "da",
-            dutch: "nl",
-            english: "en",
-            esperanto: "eo",
-            estonian: "et",
-            filipino: "tl",
-            finnish: "fi",
-            french: "fr",
-            frisian: "fy",
-            galician: "gl",
-            georgian: "ka",
-            german: "de",
-            greek: "el",
-            gujarati: "gu",
-            haitian_creole: "ht",
-            hausa: "ha",
-            hawaiian: "haw",
-            hebrew: "he",
-            hindi: "hi",
-            hmong: "hmn",
-            hungarian: "hu",
-            icelandic: "is",
-            igbo: "ig",
-            indonesian: "id",
-            irish: "ga",
-            italian: "it",
-            japanese: "ja",
-            javanese: "jw",
-            kannada: "kn",
-            kazakh: "kk",
-            khmer: "km",
-            korean: "ko",
-            kurdish: "ku",
-            kyrgyz: "ky",
-            lao: "lo",
-            latin: "la",
-            latvian: "lv",
-            lithuanian: "lt",
-            luxembourgish: "lb",
-            macedonian: "mk",
-            malagasy: "mg",
-            malay: "ms",
-            malayalam: "ml",
-            maltese: "mt",
-            maori: "mi",
-            marathi: "mr",
-            mongolian: "mn",
-            myanmar: "my",
-            nepali: "ne",
-            norwegian: "no",
-            nyanja: "ny",
-            pashto: "ps",
-            persian: "fa",
-            polish: "pl",
-            portuguese: "pt",
-            punjabi: "pa",
-            romanian: "ro",
-            russian: "ru",
-            samoan: "sm",
-            scots_gaelic: "gd",
-            serbian: "sr",
-            sesotho: "st",
-            shona: "sn",
-            sindhi: "sd",
-            sinhala: "si",
-            slovak: "sk",
-            slovenian: "sl",
-            somali: "so",
-            spanish: "es",
-            sundanese: "su",
-            swahili: "sw",
-            swedish: "sv",
-            tajik: "tg",
-            tamil: "ta",
-            telugu: "te",
-            thai: "th",
-            turkish: "tr",
-            ukrainian: "uk",
-            urdu: "ur",
-            uzbek: "uz",
-            vietnamese: "vi",
-            welsh: "cy",
-            xhosa: "xh",
-            yiddish: "yi",
-            yoruba: "yo",
-            zulu: "zu"
-        };
-        function updateTextOverlay(block) {
+
+        async function translateText(text, targetLang) {
+            if (!text.trim()) return "";
+            if (targetLang === "en") return text;
+            try {
+                const response = await fetch("{{ route('translate') }}", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "X-CSRF-TOKEN": '{{ csrf_token() }}'
+                    },
+                    body: JSON.stringify({
+                        text,
+                        target: targetLang
+                    })
+                });
+                const data = await response.json();
+                return data.translatedText || text;
+            } catch (e) {
+                return text;
+            }
+        }
+
+        async function updateTextOverlay(block) {
             const id = block.dataset.id;
             const overlay = document.getElementById(`overlay-${id}`);
             if (!overlay) return;
@@ -665,28 +593,20 @@
             const font = block.querySelector(".font-text").value;
             const size = block.querySelector(".font-size").value;
             const color = block.querySelector(".font-color").value;
-            const lang = block.querySelector(".language").value;
             const x = block.querySelector(".content-x-pos").value + "px";
             const y = block.querySelector(".content-y-pos").value + "px";
+            const langValue = block.querySelector(".language").value;
 
-            const translitCode = languageCodeMap[lang];
-            if (translitCode) {
-                window.transliterate(text, translitCode).then(transliterated => {
-                    overlay.innerText = transliterated;
-                }).catch(() => {
-                    overlay.innerText = text;
-                });
-            } else {
-                overlay.innerText = text;
-            }
-            overlay.innerText = text;
-            overlay.style.fontFamily = `"${font}", 'Noto Sans', 'Noto Serif', sans-serif`;
+            let translated = await translateText(text, langValue);
+
+            overlay.innerText = translated;
+            overlay.style.fontFamily = `"${font}", sans-serif`;
             overlay.style.fontSize = size + "px";
             overlay.style.color = color;
             overlay.style.left = x;
             overlay.style.top = y;
-            overlay.setAttribute("lang", lang);
         }
+
         function updateOverlayPosition(block) {
             const id = block.dataset.id;
             const overlay = document.getElementById(`overlay-${id}`);
@@ -695,16 +615,54 @@
             overlay.style.top = block.querySelector(".content-y-pos").value + "px";
         }
 
+        function updateContentList() {
+            const contentList = document.getElementById("content-list");
+            contentList.innerHTML = "";
+
+            getBlocks().forEach(block => {
+                const id = block.dataset.id;
+                const type = block.querySelector(".new_type").value;
+                const div = document.createElement("div");
+                div.classList.add("border", "p-1", "mb-1", "bg-light");
+                div.dataset.id = id;
+                div.style.cursor = "pointer";
+
+                if (type === "text") {
+                    const text = block.querySelector(".text_enter").value;
+                    div.contentEditable = true;
+                    div.innerText = text || `Text #${id}`;
+                    div.addEventListener("input", () => {
+                        block.querySelector(".text_enter").value = div.innerText;
+                        updateTextOverlay(block);
+                    });
+                } else if (type === "image") {
+                    const width = block.querySelector(".image-width").value;
+                    const height = block.querySelector(".image-height").value;
+                    div.innerText = `Image #${id} (${width}x${height}px)`;
+                } else {
+                    div.innerText = `Content #${id} (no type)`;
+                }
+
+                div.addEventListener("click", () => {
+                    currentBlockIndex = getBlocks().findIndex(b => b.dataset.id === id);
+                    showBlockByIndex(currentBlockIndex);
+                });
+
+                contentList.appendChild(div);
+            });
+        }
+
         function showBlockByIndex(index) {
-            const blocks = getBlocks();
-            blocks.forEach((block, i) => {
+            getBlocks().forEach((block, i) => {
                 block.classList.toggle("d-none", i !== index);
             });
         }
+
         function getBlocks() {
             return Array.from(document.querySelectorAll(".content-block"));
         }
     </script>
+
 
 </body>
 
