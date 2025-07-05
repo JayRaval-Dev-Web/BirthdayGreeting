@@ -79,20 +79,42 @@ class ImageController extends Controller
     {
         $text = $request->input('text');
         $target = $request->input('target');
+
         if (!$text || !$target) {
-            return response()->json(['translatedText' => $text]);
-        }
-        if ($target === 'en') {
-            return response()->json(['translatedText' => $text]);
+            return response()->json([
+                'transliteratedText' => $text,
+                'error' => 'Text or target language missing'
+            ]);
         }
 
         try {
-            $tr = new GoogleTranslate($target);
-            $translated = $tr->translate($text);
-            return response()->json(['translatedText' => $translated]);
+            $client = new \GuzzleHttp\Client();
+            $response = $client->request('POST', 'https://inputtools.google.com/request', [
+                'form_params' => [
+                    'text' => $text,
+                    'itc' => $target . '-t-i0-und',
+                    'num' => 1
+                ]
+            ]);
+
+            $body = json_decode($response->getBody(), true);
+
+            if (isset($body[1][0][1][0])) {
+                return response()->json([
+                    'transliteratedText' => $body[1][0][1][0],
+                ]);
+            } else {
+                return response()->json([
+                    'transliteratedText' => $text,
+                    'error' => 'No transliteration result'
+                ]);
+            }
         } catch (\Exception $e) {
-            \Log::error('GoogleTranslate exception', ['message' => $e->getMessage()]);
-            return response()->json(['translatedText' => $text, 'error' => 'Exception', 'details' => $e->getMessage()], 500);
+            return response()->json([
+                'transliteratedText' => $text,
+                'error' => 'Exception',
+                'details' => $e->getMessage()
+            ], 500);
         }
     }
 }
